@@ -27,4 +27,6 @@ angular.module('shortly.auth', [])
         console.error(error);
       });
   };
+
+  console.log("Inside AuthController");
 });
