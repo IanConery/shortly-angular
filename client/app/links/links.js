@@ -1,6 +1,6 @@
 angular.module('shortly.links', [])
 
-.controller('LinksController', function ($scope, Links, $location) {
+.controller('LinksController', function ($scope, Links, $location, Auth) {
   $scope.data = {}; 
   // console.log('TEST -------> Links = ', Links);
   // var links = Links; 
@@ -33,6 +33,8 @@ angular.module('shortly.links', [])
   $scope.changeView = function(){
     // console.log('clicked. url = '+ $location.url('/'));
   }
+
+  $scope.signout = Auth.signout;
 
   $scope.spinner = false; 
   $scope.links = $scope.getLinks();
