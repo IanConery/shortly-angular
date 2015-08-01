@@ -9,7 +9,8 @@ angular.module('shortly.links', [])
     Links.getLinks()
       .then(function(data){
 
-        console.log('TEST -----> data = ', data);
+        console.log('TEST -----> data = ', data.data);
+        $scope.links = data.data;
 
       }).catch(function (error) {
         console.error(error);
@@ -22,6 +23,7 @@ angular.module('shortly.links', [])
       .then(function(data){
 
         console.log('TEST -----> data = ', data);
+        // console.log("inside of LinksController");
 
       }).catch(function (error) {
         console.error(error);
@@ -31,7 +33,6 @@ angular.module('shortly.links', [])
 
   $scope.links = $scope.getLinks();
 
-  console.log("inside of LinksController");
   // $scope.data = 
   $scope.postLink({visits:5, title:'testlink.com', url:'http://www.yahoo.com'});
 });
