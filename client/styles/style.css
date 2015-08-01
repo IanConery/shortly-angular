@@ -33,11 +33,13 @@ h1 {
 
 .navigation li a {
   width: 100px;
-  height: 20px;
+  /*height: 20px;*/
+  height:100%;
   line-height: 20px;
   padding: 10px;
   display: block;
   text-align: center;
+  text-decoration: none;
 }
 
 .navigation li a:hover {
@@ -55,6 +57,7 @@ h1 {
 
 .link {
   clear: both;
+  margin-top: 10px;
   margin-bottom: 5px;
   padding: 5px;
   min-height: 50px;
@@ -135,11 +138,11 @@ input[type=url]:focus {
   height: 80px;
 }
 
-.creator img.spinner {
+#create img.spinner {
   height: 46px;
   margin-bottom: 5px;
   padding: 10px;
-  display: none;
+  display: inline-block;
 }
 
 .creator .message {

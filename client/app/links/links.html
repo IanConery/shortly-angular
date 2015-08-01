@@ -1,7 +1,24 @@
 <div id='container'>
+  
+  <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a href='/logout' class='logout'>Logout</a></li>
+    </ul>
+  </div>
   <ul>
 
-    <li ng-repeat = 'link in links'> {{link.url}}</li>
+    <li ng-repeat = 'link in links' class='link'> 
+        <img src='/assets/redirect_icon.png'/>
+        <div class='info'>
+          <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
+          <div class='title'>{{link.title}}</div>
+          <div class='original'>{{link.url}}</div>
+          <a href='{{base_url}}/{{code}}'>{{link.base_url}}/{{link.code}}</a>
+        </div>
+
+    </li>
   </ul>
 
 

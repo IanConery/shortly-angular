@@ -1,5 +1,20 @@
 <div id='container'>
 <!-- Your code here -->
+  <div class='navigation'>
+    <ul>
+      <li><a href='#/links' class='index'>All Links</a></li>
+      <li><a href='#/shorten' class='create'>Shorten</a></li>
+      <li><a href='/logout' class='logout'>Logout</a></li>
+    </ul>
+  </div>
+  <div id='create'>
+    <form>
+        <input ng-model='newUrl' class='text' type='text' name='url'>
+        <input type='submit' value='Shorten' ng-click = "postLink(newUrl)">
+    </form>
+    <img ng-show='spinner' class='spinner' src='assets/spiffygif_46x46.gif'>
+    <div class='message'></div>
+  </div>
 
 </div>
 
