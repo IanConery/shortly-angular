@@ -23,6 +23,10 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'LinksController'
     })
+    .when('/', {
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
+    })
     // .when('/signout', {
     //   templateUrl: 'app/shorten/1.html',
     //   controller: 'LinksController'

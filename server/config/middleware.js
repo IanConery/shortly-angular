@@ -15,6 +15,7 @@ module.exports = function (app, express) {
 
 
   app.use('/api/users', userRouter); // use user router for all user request
+  app.use('/', linkRouter); // use user router for all user request
 
   // authentication middleware used to decode token and made available on the request
   //app.use('/api/links', helpers.decode);

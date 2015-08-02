@@ -6,7 +6,7 @@ angular.module('shortly.auth', [])
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
 
-  $scope.signin = function () {
+  $scope.signin = function () { //http get request to the server
     Auth.signin($scope.user)
       .then(function (token) {
         $window.localStorage.setItem('com.shortly', token);

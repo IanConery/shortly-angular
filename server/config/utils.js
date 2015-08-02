@@ -23,4 +23,4 @@ module.exports = {
     return url.match(rValidUrl);
   }
 };
-
+   

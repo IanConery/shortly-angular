@@ -7,17 +7,18 @@
       <li><a ng-click='signout()' href='#/signin' class='logout'>Logout</a></li>
     </ul>
   </div>
-  <ul>
+  
+  <input type='text'ng-model='linkFilter'>
 
-    <li ng-repeat = 'link in links' class='link'> 
+  <ul>
+    <li ng-repeat = 'link in links | orderBy: "-visits" | filter: linkFilter' class='link'> 
         <img src='/assets/redirect_icon.png'/>
         <div class='info'>
           <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
           <div class='title'>{{link.title}}</div>
           <div class='original'>{{link.url}}</div>
-          <a href='{{base_url}}/{{code}}'>{{link.base_url}}/{{link.code}}</a>
+          <a href='/api/links/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
         </div>
-
     </li>
   </ul>
 

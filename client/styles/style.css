@@ -145,7 +145,15 @@ input[type=url]:focus {
   display: inline-block;
 }
 
+#create{
+  text-align: center;
+}
+
 .creator .message {
   clear: both;
 }
 
+#warning{
+  padding: 40px;
+
+}

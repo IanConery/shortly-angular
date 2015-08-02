@@ -8,12 +8,14 @@
     </ul>
   </div>
   <div id='create'>
+
     <form>
         <input ng-model='newUrl' class='text' type='text' name='url'>
-        <input type='submit' value='Shorten' ng-click = "postLink(newUrl)">
+        <input type='submit' value='Shorten' ng-click = "postLink(newUrl);">
     </form>
     <img ng-show='spinner' class='spinner' src='assets/spiffygif_46x46.gif'>
     <div class='message'></div>
+    <div id='warning' ng-show='!!warning' class='alert alert-danger btn ' ng-click='warning=false;'> {{warning}}</div>
   </div>
 
 </div>
